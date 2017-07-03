@@ -4,9 +4,11 @@
 echo Installing personal bash settings...
 
 # back up the old profile just in case
-mkdir ~/bak
-cp ~/.bash_profile ~/bak/
-cp ~/.bash_aliases ~/bak/
+if [ ! -d "~/bak" ]; then
+  mkdir ~/bak
+fi
+cp ~/.bash_profile ~/bak/.bash_profile.$(date +%Y%m%d%H%M)
+cp ~/.bash_aliases ~/bak/.bash_aliases.$(date +%Y%m%d%H%M)
 
 # copy over the latest files
 cp ./.bash_profile ~/
