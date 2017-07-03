@@ -1,0 +1,23 @@
+grep_files() {
+  grep -rnw '$1' -e '$2'
+}
+
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias gaa='git add .'
+alias gb='git branch'
+alias gc='git commit'
+alias gfa='git fetch --all'
+alias gl='git log'
+alias gmm='git merge master'
+alias gp='git pull'
+alias gpom='git push origin master'
+alias grep='grep --color=auto'
+alias gs='git status'
+alias jsql='sudo -u postgres psql joshua_test'
+alias l='ls -CF'
+alias la='ls -A'
+alias ll='ls -alF'
+#alias ls='ls --color=auto'
+alias search='grep_files'
