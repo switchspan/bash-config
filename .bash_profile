@@ -1,4 +1,7 @@
 export BASH_CONF="bash_profile"
+export VISUAL=vim
+export EDITOR="$VISUAL"
+export GIT_EDITOR=vim
 
 # If id command returns zero, you’ve root access.
 if [ $(id -u) -eq 0 ];
@@ -6,6 +9,12 @@ then # you are root, set red colour prompt
   PS1="\\[$(tput setaf 1)\\]\\u@\\h:\\w #\\[$(tput sgr0)\\] "
 else # normal
   PS1="[\\u@\\h:\\w] $ "
+fi
+
+if ! [ -x "$(command -v git)" ]; then
+  echo 'Error: git is not installed.'
+elif
+  git config --global core.editor "vim"
 fi
 
 # Alias definitions.
