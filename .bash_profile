@@ -11,12 +11,6 @@ else # normal
   PS1="[\\u@\\h:\\w] $ "
 fi
 
-if ! [ -x "$(command -v git)" ]; then
-  echo 'Error: git is not installed.'
-elif
-  git config --global core.editor "vim"
-fi
-
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
