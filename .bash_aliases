@@ -5,6 +5,7 @@ grep_files() {
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
+alias ga='git add'
 alias gaa='git add .'
 alias gb='git branch'
 alias gc='git commit'
