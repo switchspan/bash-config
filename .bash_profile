@@ -18,6 +18,11 @@ PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 if ! [ -x "$(command -v git)" ]; then
   echo 'Error: git is not installed.' >&2
   exit 1
+else
+  # Set git to use the credential memory cache
+  git config --global credential.helper cache
+  # Set the cache to timeout after 1 hour (setting is in seconds)
+  git config --global credential.helper 'cache --timeout=3600'
 fi
 
 # install curl if it is not installed
