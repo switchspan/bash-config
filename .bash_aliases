@@ -23,3 +23,9 @@ alias la='ls -A'
 alias ll='ls -alF'
 #alias ls='ls --color=auto'
 alias search='grep_files'
+
+# Joshua specific aliass
+alias import='sudo nsimport.sh'
+alias sqitch='sudo sqitch'
+alias reimp='sqitch rebase -y; import'
+alias reimp2='sqitch rebase -y; import; import'
